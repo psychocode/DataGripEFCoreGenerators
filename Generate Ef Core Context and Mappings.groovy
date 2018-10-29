@@ -29,7 +29,7 @@ FILES.chooseDirectoryAndSave("Choose directory", "Choose where to store generate
 
 def generateContextFile(tables, dir)
 {
-    new File(dir, "ahhContext.cs").withPrintWriter { out -> generateContext(out, tables) }
+    new File(dir, "Context.cs").withPrintWriter { out -> generateContext(out, tables) }
 }
 
 def generateEntities(table, dir) {
