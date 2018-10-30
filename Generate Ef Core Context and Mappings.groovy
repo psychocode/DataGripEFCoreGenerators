@@ -39,9 +39,9 @@ def generateEntities(table, dir) {
     new File(dir, className + ".cs").withPrintWriter { out -> generateClass(out, className, fields) }
 
     if (table.getKind() == ObjectKind.TABLE)
-        new File(dir, className + "Mapping" + ".cs").withPrintWriter { out -> generateTableClassMapping(out, tableName, className, fields) }
+        new File(dir, className + "Map" + ".cs").withPrintWriter { out -> generateTableClassMapping(out, tableName, className, fields) }
     if (table.getKind() == ObjectKind.VIEW)
-        new File(dir, className + "Mapping" + ".cs").withPrintWriter { out -> generateViewClassMapping(out, tableName, className, fields) }
+        new File(dir, className + "Map" + ".cs").withPrintWriter { out -> generateViewClassMapping(out, tableName, className, fields) }
 
 }
 
